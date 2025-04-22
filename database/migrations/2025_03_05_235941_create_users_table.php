@@ -17,17 +17,14 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('email')->nullable();
             $table->string('password')->nullable();
-            $table->foreignId('user_level')->constrained('user_groups')->onDelete('cascade');
+            $table->enum('role', ['medcin', 'infirmier', 'secretaire', 'administratif', 'technicien']);
             $table->string('image')->default('no_image.jpg');
-            $table->enum('status',[0,1]);
-            $table->dateTime('last_login');
+            $table->tinyInteger('status')->default(1); // Changed from enum to tinyInteger
+            $table->time('heure_debut')->nullable(); // Added missing column
+            $table->time('heure_fin')->nullable(); // Added missing column
+            $table->dateTime('last_login')->nullable(); // Made nullable
             $table->timestamps();
-
-
         });
-
-
-
     }
 
     /**
@@ -35,8 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-
         Schema::dropIfExists('users');
-
     }
 };
+
