@@ -50,11 +50,7 @@ class AuthController extends Controller
                     'message' => 'Welcome, Doctor!',
                     'data' => 'Doctor Dashboard Content',
                 ]);
-            case 'infirmier':
-                return response()->json([
-                    'message' => 'Welcome, Nurse!',
-                    'data' => 'Nurse Dashboard Content',
-                ]);
+            
             case 'secretaire':
                 return response()->json([
                     'message' => 'Welcome, Secretary!',
@@ -65,11 +61,7 @@ class AuthController extends Controller
                     'message' => 'Welcome, Admin Staff!',
                     'data' => 'Administrative Dashboard Content',
                 ]);
-            case 'technicien':
-                return response()->json([
-                    'message' => 'Welcome, Technician!',
-                    'data' => 'Technician Dashboard Content',
-                ]);
+           
             default:
                 return response()->json([
                     'message' => 'Unauthorized role',

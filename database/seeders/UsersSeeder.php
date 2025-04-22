@@ -24,19 +24,7 @@ class UsersSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
-                'name' => 'Infirmier',
-                'email' => 'infirmier@example.com',
-                'password' => Hash::make('password'),
-                'role' => 'infirmier',
-                'image' => 'no_image.jpg',
-                'status' => 1,
-                'heure_debut' => '07:00:00',
-                'heure_fin' => '15:00:00',
-                'last_login' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+         
             [
                 'name' => 'Secretaire',
                 'email' => 'secretaire@example.com',
@@ -63,19 +51,7 @@ class UsersSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
-                'name' => 'Technicien',
-                'email' => 'technicien@example.com',
-                'password' => Hash::make('password'),
-                'role' => 'technicien',
-                'image' => 'no_image.jpg',
-                'status' => 1,
-                'heure_debut' => '06:00:00',
-                'heure_fin' => '14:00:00',
-                'last_login' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            
         ]);
     }
 }

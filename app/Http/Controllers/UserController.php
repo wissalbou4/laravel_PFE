@@ -37,7 +37,7 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
-            'role' => 'required|in:medcin,infirmier,secretaire,administratif,technicien',
+            'role' => 'required|in:medcin,secretaire,administratif',
         ]);
 
         // Create the user
@@ -73,7 +73,7 @@ class UserController extends Controller
             'name' => 'sometimes|string|max:255',
             'email' => 'sometimes|email|unique:users,email,' . $id,
             'password' => 'sometimes|string|min:8',
-            'role' => 'sometimes|in:medcin,infirmier,secretaire,administratif,technicien',
+            'role' => 'sometimes|in:medcin,secretaire,administratif',
         ]);
 
         // Find the user

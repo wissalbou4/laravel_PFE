@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('email')->nullable();
             $table->string('password')->nullable();
-            $table->enum('role', ['medcin', 'infirmier', 'secretaire', 'administratif', 'technicien']);
+            $table->enum('role', ['medcin',  'secretaire', 'administratif']);
             $table->string('image')->default('no_image.jpg');
             $table->tinyInteger('status')->default(1); // Changed from enum to tinyInteger
             $table->time('heure_debut')->nullable(); // Added missing column
