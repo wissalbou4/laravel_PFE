@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrdonnanceController;
 
 // Public routes (no authentication required)
 Route::post('/login', [AuthController::class, 'login']); // User login
@@ -20,3 +21,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update']); // Update a user
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 });
+
+
+Route::apiResource('ordonnances', OrdonnanceController::class);

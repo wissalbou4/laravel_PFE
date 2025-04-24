@@ -40,7 +40,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'name' => 'Administratif',
-                'email' => 'administratif@example.com',
+                'email' => 'X',
                 'password' => Hash::make('password'),
                 'role' => 'administratif',
                 'image' => 'no_image.jpg',
