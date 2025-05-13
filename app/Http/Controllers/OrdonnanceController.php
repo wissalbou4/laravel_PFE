@@ -17,10 +17,10 @@ use Illuminate\Http\Request;
         {
             $validated = $request->validate([
                 'date' => 'required|date',
-                'traitement' => 'required|string',
-                'note' => 'nullable|string',
-                'dousage' => 'required|string',
-                'duree' => 'required|string',
+                'traitement' => 'string',
+                'note' => 'string',
+                'dosage' => 'string',
+                'duree' => 'string',
                 'patient_id' => 'required|exists:patients,id',
             ]);
     
@@ -40,7 +40,7 @@ use Illuminate\Http\Request;
             $ordonnance = Ordonnance::findOrFail($id);
     
             $ordonnance->update($request->only([
-                'date', 'traitement', 'note', 'dousage', 'duree', 'patient_id'
+                'date', 'traitement', 'note', 'dosage', 'duree', 'patient_id'
             ]));
     
             return response()->json($ordonnance);
