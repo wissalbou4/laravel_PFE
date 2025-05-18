@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('telephone');
             $table->string('date_naissance');
+            $table->text('antecedents_medicaux');
             $table->timestamps();
         });
     }
